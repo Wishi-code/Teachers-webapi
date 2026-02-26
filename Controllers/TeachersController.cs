@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TeachersAPI.Models;
- 
+
  namespace TeachersAPI.Controllers
 {
     [ApiController]
@@ -10,7 +10,7 @@ using TeachersAPI.Models;
         public static List<Teachers> Teachers = new List<Teachers>
         {
             new Teachers{age= 20, name="Wishenga Natal", email="wishenganatal@gmail.com" } ,
-            new Teachers {age= 26, name = "Anita Leila", email= "anitaleila@gmail.com"}
+            new Teachers {age= 26, name ="Anita Leila", email= "anitaleila@gmail.com"}
         };
         [HttpGet]
         public IActionResult GetTeachers()
@@ -21,7 +21,7 @@ using TeachersAPI.Models;
         [HttpPost]
         public IActionResult AddTeachers(Teachers newTeachers)
         {
-            Teachers.Add(newTeachers);
+            Teachers.Add(newTeachers);             
             return Ok(newTeachers);
         }
 
